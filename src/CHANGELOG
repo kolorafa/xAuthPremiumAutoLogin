@@ -1,3 +1,6 @@
+v1.3 - 11.08.2012
+*  Add 5s delay to work around login problem.
+
 v1.2 - 11.08.2012
 *  More event to listen
 

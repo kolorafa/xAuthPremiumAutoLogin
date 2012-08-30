@@ -5,3 +5,4 @@ messages:
   notPremium: You need to be logged as premium user!
   newAccountRegistered: Your account {login} successfuly registered. Your password is {password}
   autoLogged: Successfuly auto-logged in.
+  autologinMessage: Hello Premium player. You will be logged in 5seconds.

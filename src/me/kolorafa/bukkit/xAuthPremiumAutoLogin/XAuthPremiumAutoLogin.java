@@ -98,14 +98,17 @@ public class XAuthPremiumAutoLogin extends JavaPlugin implements Listener {
     public void playerpremiumchange(PremiumStatusEvent event) {
         if (event.hasPremium()) {
             online.add(event.getPlayerName());
-            Player p = getServer().getPlayerExact(event.getPlayerName());
-            if(p!=null&&p.isOnline())check(p);
+            Player p = getServer().getPlayerExact(event.getPlayerName());            
+            if(p!=null&&p.isOnline()){
+                getServer().getScheduler().scheduleAsyncDelayedTask(this, new delayPlayerLogin(this, p), 100L);
+                p.sendMessage(getConfig().getString("messages.autologinMessage").replace("{login}", p.getDisplayName()));
+            }
         } else {
             online.remove(event.getPlayerName());
         }
     }
     
-    private void check(Player p){
+    public void check(Player p){
         log("Sprawdzam gracza: "+p.getName());
         if (online.contains(p.getName())) {
             xAuth a = (xAuth) getServer().getPluginManager().getPlugin("xAuth");

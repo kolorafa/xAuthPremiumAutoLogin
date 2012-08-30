@@ -1,6 +1,6 @@
 name: xAuthPremiumAutoLogin
 main: me.kolorafa.bukkit.xAuthPremiumAutoLogin.XAuthPremiumAutoLogin
-version: 1.2
+version: 1.3
 description: Autologin and autoregister premium players at xauth
 author: kolorafa
 depend: [ PremiumProxy, xAuth ]
