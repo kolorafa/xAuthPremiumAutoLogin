@@ -1,0 +1,7 @@
+debug: true
+messages:
+  passwordChanged: Password changed.
+  notRegistered: This account isn't registered
+  notPremium: You need to be logged as premium user!
+  newAccountRegistered: Your account {login} successfuly registered. Your password is {password}
+  autoLogged: Successfuly auto-logged in.
